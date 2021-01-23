@@ -1,0 +1,24 @@
+[
+	{
+		"title": "scott.center",
+		"description": "scott.center is Scott's personal website. The front-end is written in React and utilizes the PHP and MySQL backend API to retrieve users and data using the ScottIdentity token system"
+	},
+	{
+		"title": "VisualOS",
+		"description": "VisualOS is a x86-64 UEFI operating system that aims to remove the need for command line interfaces",
+		"image": "/assets/VisualOS_256x256_White.png",
+		"link": "https://github.com/nothotscott/VisualOS"
+	},
+	{
+		"title": "BlueGUI",
+		"description": "Java based bluetooth audio mixer for raspberry pis",
+		"image": "/assets/BlueGUI2.png",
+		"link": "https://github.com/nothotscott/BlueGUI"
+	},
+	{
+		"title": "RADConsole",
+		"description": "GUI based P25 digital radio decoder and more for mobile computers",
+		"link": "https://github.com/nothotscott/RADConsole",
+		"linkText": "Coming soon!"
+	}
+]

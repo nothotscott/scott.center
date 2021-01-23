@@ -1,0 +1,32 @@
+[
+	{
+		"label": "Home",
+		"path": "/",
+		"icon": "home",
+		"navbar": ["default", "loggedIn"]
+	},
+	{
+		"label": "Projects",
+		"path": "/projects",
+		"icon": "cubes",
+		"navbar": ["default", "loggedIn"]
+	},
+	{
+		"label": "Login",
+		"path": "/login",
+		"icon" : "users",
+		"navbar": ["loggedOut"]
+	},
+	{
+		"label": "Create Account",
+		"path": "/createaccount",
+		"icon" : "user-plus",
+		"navbar": ["loggedOut"]
+	},
+	{
+		"label": "Me",
+		"path": "/me",
+		"icon" : "user",
+		"navbar": ["loggedIn"]
+	}
+]

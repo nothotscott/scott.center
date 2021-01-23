@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component, Suspense, lazy} from "react";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { Spinner } from "react-bootstrap";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { AccountProvider } from "./api/account";
+import LayoutProvider, { LayoutContext } from "./layout";
+import loadFonts from "./fonts"
+import NotFound from "./components/notfound"
+
+import navigations from "./resources/navigations.json";
+import "./App.scss"
+import {Helmet} from "react-helmet";
+
+const components = {
+	"Home": lazy(() =>import("./components/home")),
+	"Projects": lazy(() =>import("./components/projects")),
+	"Login": lazy(() =>import("./components/login")),
+	"Create Account": lazy(() => import("./components/createaccount")),
+	"Me": lazy(() => import("./components/me"))
 }
 
-export default App;
+//TODO <Helmet><title>the title</title></Helmet>
+
+export default class App extends Component {
+	constructor(props) {
+		super(props)
+		loadFonts()
+	}
+	
+	getRouterSwitch(layout) {
+		return (<React.Fragment>
+			<Suspense fallback={<div className="d-flex justify-content-center"><Spinner animation="grow"/></div>}>
+				<Switch>
+					{
+						Array.from(navigations).map(function (navigation, index) {
+							let component = components[navigation["label"]]
+							return <Route exact={navigation["path"] === "/" ? true : false} key={index} path={navigation["path"]} component={component} />
+						})
+					}
+					<Route component={NotFound}/>
+				</Switch>
+			</Suspense>
+		</React.Fragment>)
+	}
+	
+	render() {
+		return (<React.Fragment>
+			<Router>
+				<LayoutProvider>
+					<LayoutContext.Consumer>{({layout, setLayout}) => (
+						<AccountProvider layout={layout} setLayout={setLayout}>
+							<React.Fragment>{this.getRouterSwitch(layout)}</React.Fragment>
+						</AccountProvider>
+					)}</LayoutContext.Consumer>
+				</LayoutProvider>
+			</Router>
+		</React.Fragment>)
+	}
+}
