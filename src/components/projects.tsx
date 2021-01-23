@@ -45,7 +45,7 @@ export default class Projects extends Component {
 			<Row xs="1" sm="2" xl="2">
 			{
 				projects.map(function (project: Project, index) {
-					return <Col><ProjectComponent key={index} project={project}/></Col>
+					return <Col key={index}><ProjectComponent key={index} project={project}/></Col>
 				})
 			}
 			</Row>

@@ -9,7 +9,6 @@ import NotFound from "./components/notfound"
 
 import navigations from "./resources/navigations.json";
 import "./App.scss"
-import {Helmet} from "react-helmet";
 
 const components = {
 	"Home": lazy(() =>import("./components/home")),
