@@ -16,7 +16,8 @@ export default class Home extends Component {
 	render() {
 		const {account} = this.context;
 		return (<React.Fragment>
-			<Title title="Home" subtitle={AccountLibrary.accountIsUndefined(account) ? "Welcome to Scott's official website" : "Hello " + account.username + "! Welcome back to Scott's official website"} />
+			<Title title="Home" subtitle={AccountLibrary.accountIsUndefined(account) ? "Welcome to Scott's official website" : "Hello " + account.username + "! Welcome back to Scott's official website"}/>
+			<p>scott.center is currently under development in ReactJS.</p>
 		</React.Fragment>)
 	}
 }

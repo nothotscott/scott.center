@@ -6,6 +6,13 @@
 		"navbar": ["default", "loggedIn"]
 	},
 	{
+		"label": "WordPress",
+		"path": "http://wordpress.scott.center",
+		"icon": "wordpress",
+		"iconLibrary": "fab",
+		"navbar": ["default", "loggedIn"]
+	},
+	{
 		"label": "Projects",
 		"path": "/projects",
 		"icon": "cubes",

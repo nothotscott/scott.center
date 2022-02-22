@@ -10,7 +10,8 @@ export type Navigations = keyof typeof navigations
 export interface Navigation {
 	label: string
 	path: string
-	icon: string | undefined
+	icon?: string
+	iconLibrary?: string
 	navbar?: Array<string>
 }
 

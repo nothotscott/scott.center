@@ -7,7 +7,7 @@ export interface RestResponse {
 }
 
 export default class Rest {
-	static readonly baseUrl = "http://api.scott.center"
+	static readonly baseUrl = "https://api.scott.center"
 	private props: any
 	
 	constructor(props: any) {

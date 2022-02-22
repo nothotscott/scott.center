@@ -28,7 +28,7 @@ export class ProjectComponent extends Component<ProjectProps> {
 				<Card.Title>{this.props.project.title}</Card.Title>
 				{/* TODO images, probably with lazy loading and states :( project.image !== undefined ? <Card.Img variant="top" src={require("../assets/VisualOS_256x256_White.png").default}/> : <React.Fragment /> */}
 				<Card.Text>{this.props.project.description}</Card.Text>
-				{this.props.project.link !== undefined ? <Button variant="primary" block href={this.props.project.link}>{this.props.project.linkText !== undefined ? this.props.project.linkText : defaultLinkText}</Button> : <React.Fragment />}
+				{this.props.project.link !== undefined ? <Button variant="primary" href={this.props.project.link}>{this.props.project.linkText !== undefined ? this.props.project.linkText : defaultLinkText}</Button> : <React.Fragment />}
 			</Card.Body>
 		</Card>)
 	}
