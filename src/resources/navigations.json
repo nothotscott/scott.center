@@ -13,10 +13,21 @@
 		"navbar": ["default", "loggedIn"]
 	},
 	{
-		"label": "Projects",
-		"path": "/projects",
-		"icon": "cubes",
-		"navbar": ["default", "loggedIn"]
+		"label": "Cool stuff",
+		"icon": "vial",
+		"navbar": ["default", "loggedIn"],
+		"items": [
+			{
+				"label": "Projects",
+				"path": "/projects",
+				"icon": "cubes"
+			},
+			{
+				"label": "URL Shortener",
+				"path": "/shortener",
+				"icon": "file-zipper"
+			}
+		]
 	},
 	{
 		"label": "Login",

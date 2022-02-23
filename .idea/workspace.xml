@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813c4218-ba7a-4931-a123-0bcc16379b72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shortener.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Scott.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Scott.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/rest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/rest.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fonts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/fonts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/navigations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/navigations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,11 +88,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.npm build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/index.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm build" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -105,6 +115,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="Node.js.index.js" />
+      <item itemvalue="npm.npm build" />
+      <item itemvalue="npm.npm start" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.index.js" />
@@ -145,7 +161,8 @@
       <workItem from="1619206630917" duration="35000" />
       <workItem from="1627342933645" duration="84000" />
       <workItem from="1645486991624" duration="952000" />
-      <workItem from="1645488545848" duration="5569000" />
+      <workItem from="1645488545848" duration="19698000" />
+      <workItem from="1645549344219" duration="21376000" />
     </task>
     <servers />
   </component>

@@ -30,6 +30,7 @@
     "react": "latest",
     "react-bootstrap": "latest",
     "react-cookies": "latest",
+    "react-copy-to-clipboard": "latest",
     "react-dom": "latest",
     "react-helmet": "latest",
     "react-router-dom": "^5.2.0",
@@ -66,5 +67,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-copy-to-clipboard": "^5.0.2"
   }
 }

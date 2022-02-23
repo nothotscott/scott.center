@@ -7,16 +7,25 @@ import navigations from "./resources/navigations.json"
 
 
 export type Navigations = keyof typeof navigations
-export interface Navigation {
+export interface NavigationSet {
+	label: string
+	icon?: string
+	iconLibrary?: string
+	navbar?: Array<string>
+	items: Array<NavigationItem>
+}
+export interface NavigationItem {
 	label: string
 	path: string
 	icon?: string
 	iconLibrary?: string
 	navbar?: Array<string>
 }
+export type Navigation = NavigationSet | NavigationItem;
 
+export type Theme = "light" | "dark";
 export interface Layout {
-	theme: "light" | "dark"
+	theme: Theme
 	profiles: Array<string>
 }
 export const layoutDefault: Layout = {
@@ -37,6 +46,7 @@ export default class LayoutProvider extends Component<{}, LayoutProviderState> {
 		this.state = {
 			layout: layoutDefault
 		}
+		this.state.layout.theme = LayoutProvider.getSystemTheme();
 	}
 	
 	static getNavigationsFromProfiles(profiles: Array<string>) {
@@ -58,7 +68,7 @@ export default class LayoutProvider extends Component<{}, LayoutProviderState> {
 		return navigable
 	}
 	
-	static getSystemTheme() : "light" | "dark" {
+	static getSystemTheme() : Theme {
 		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 		return prefersDark ? "dark" : "light"
 	}
@@ -73,10 +83,14 @@ export default class LayoutProvider extends Component<{}, LayoutProviderState> {
 		const { layout } = this.state;
 		const { setLayout } = this;
 		return (<LayoutContext.Provider value={{ layout: layout, setLayout: setLayout }}>
-			<ComponentNavbar {...this.props}></ComponentNavbar>
+			<header>
+				<ComponentNavbar {...this.props}></ComponentNavbar>
+			</header>
 			<br/>
 			<Container>
-				{this.props.children}
+				<main>
+					{this.props.children}
+				</main>
 			</Container>
 		</LayoutContext.Provider>)
 	}

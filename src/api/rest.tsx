@@ -14,7 +14,7 @@ export default class Rest {
 		this.props = props
 	}
 	
-	static async request(target: string, getData: object | undefined, postData: object | undefined = undefined) {
+	static async request(target: string, getData: object | undefined, postData: object | undefined = undefined, url: string = this.baseUrl) {
 		return new Promise<RestResponse>((resolve: (value: RestResponse | PromiseLike<RestResponse>) => void, reject: (error: any) => void) => {
 			let headers: RequestInit = {
 				method: postData === undefined ? "GET" : "POST",
@@ -29,7 +29,7 @@ export default class Rest {
 			if (getData !== undefined) {
 				resource += "?" + QueryString.stringify(getData);
 			}
-			fetch([this.baseUrl, resource].join("/"), headers)
+			fetch([url, resource].join("/"), headers)
 			.then((response: Response) => response.json())
 			.then((responseJson) => {
 				resolve(responseJson)
