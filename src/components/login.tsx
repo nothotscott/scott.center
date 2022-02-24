@@ -72,11 +72,11 @@ export default class Login extends Component<any, LoginState> {
 				const {values, touched, errors, handleChange, isSubmitting, handleSubmit, isValid} = props;
 				return (
 					<Form noValidate onSubmit={handleSubmit}>
-						<Form.Group controlId="username">
+						<Form.Group className="input-block" controlId="username">
 							<Form.Control name="username" type="text" placeholder="Username" value={values.username} onChange={handleChange} isValid={touched.username && !errors.username} isInvalid={errors.username !== undefined}/>
 							<Form.Control.Feedback type="invalid">{errors.username}</Form.Control.Feedback>
 						</Form.Group>
-						<Form.Group controlId="password">
+						<Form.Group className="input-block" controlId="password">
 							<Form.Control name="password" type="password" placeholder="Password" value={values.password} onChange={handleChange} isValid={touched.username && !errors.password} isInvalid={errors.password !== undefined}/>
 							<Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
 						</Form.Group>

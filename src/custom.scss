@@ -1,5 +1,24 @@
 $icon-text-margin:	4px;
 
+/*** Custom modifications to bootstrap (must be done after inclusion) ***/
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+pre, code, .code {
+	font-family: "Source Code Pro", "Consolas", "Inconsolata", "Droid Sans Mono", "Monaco", monospace;
+}
+
+.spinner-big {
+	width: 5rem;
+	height: 5rem;
+}
+
+nav.navbar.transparent {
+	background: transparent !important;
+}
+
 /*** Custom CSS ***/
 
 div.frame-center {
@@ -18,5 +37,9 @@ div.frame-center {
 }
 .icon-text-right {
 	margin-right: $icon-text-margin;
+}
+
+.input-block {
+	margin-bottom: 1rem;
 }
 

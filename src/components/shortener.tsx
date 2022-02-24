@@ -65,33 +65,8 @@ export default class Shortener extends Component<any, ShortenerState> {
 					{this.state.error && this.state.showError &&
 					<Alert variant="danger" dismissible onClose={() => this.setState({showError: false})}>{this.state.error}</Alert>
 					}
-					<Form noValidate onSubmit={handleSubmit} autoComplete="off">
-						<Form.Group controlId="slug" as={Row}>
-							<Form.Label column md="2">Slug</Form.Label>
-							<InputGroup hasValidation as={Col}>
-								<InputGroup.Text id="slug">https://ma.day/</InputGroup.Text>
-								<FormControl name="slug" type="text" placeholder="pick-something-memorable" value={values.slug} onChange={handleChange} isValid={touched.slug && !errors.slug} isInvalid={errors.slug !== undefined}/>
-								<FormControl.Feedback type="invalid">{errors.slug}</FormControl.Feedback>
-							</InputGroup>
-						</Form.Group>
-						<Form.Group controlId="target" as={Row}>
-							<Form.Label column md="2">Target</Form.Label>
-							<Col>
-								<FormControl name="target" type="url" placeholder="https://www.google.com/" value={values.target} onChange={handleChange} isValid={touched.target && !errors.target} isInvalid={errors.target !== undefined}/>
-								<FormControl.Feedback type="invalid">{errors.target}</FormControl.Feedback>
-							</Col>
-						</Form.Group>
-						<Form.Group controlId="key" as={Row}>
-							<Form.Label column md="2">Key</Form.Label>
-							<Col>
-								<FormControl name="key" type="text" placeholder="demo" value={values.key} onChange={handleChange} isValid={touched.key && !errors.key} isInvalid={errors.key !== undefined}/>
-								<FormControl.Feedback type="invalid">{errors.target}</FormControl.Feedback>
-							</Col>
-						</Form.Group>
-						<Button variant="primary" type="submit" disabled={isSubmitting || !isValid}><FontAwesomeIcon className="icon-text-left" icon="file-zipper"/>Shorten</Button>
-					</Form>
 					{values.slug &&
-					<InputGroup>
+					<InputGroup className="input-block">
 						<CopyToClipboard text={"https://ma.day/" + values.slug}>
 							<Button variant={values.slug === this.state.slugSnapshotRequest ? "outline-success" : "outline-dark"} disabled={isSubmitting}>
 								<FontAwesomeIcon icon={["far", "clipboard"]}/>
@@ -100,6 +75,31 @@ export default class Shortener extends Component<any, ShortenerState> {
 						<FormControl readOnly value={"https://ma.day/" + values.slug}/>
 					</InputGroup>
 					}
+					<Form noValidate onSubmit={handleSubmit} autoComplete="off">
+						<Form.Group className="input-block" controlId="slug" as={Row}>
+							<Form.Label column md="2">Slug</Form.Label>
+							<InputGroup hasValidation as={Col}>
+								<InputGroup.Text id="slug">https://ma.day/</InputGroup.Text>
+								<FormControl name="slug" type="text" placeholder="pick-something-memorable" value={values.slug} onChange={handleChange} isValid={touched.slug && !errors.slug} isInvalid={errors.slug !== undefined}/>
+								<FormControl.Feedback type="invalid">{errors.slug}</FormControl.Feedback>
+							</InputGroup>
+						</Form.Group>
+						<Form.Group className="input-block" controlId="target" as={Row}>
+							<Form.Label column md="2">Target</Form.Label>
+							<Col>
+								<FormControl name="target" type="url" placeholder="https://www.google.com/" value={values.target} onChange={handleChange} isValid={touched.target && !errors.target} isInvalid={errors.target !== undefined}/>
+								<FormControl.Feedback type="invalid">{errors.target}</FormControl.Feedback>
+							</Col>
+						</Form.Group>
+						<Form.Group className="input-block" controlId="key" as={Row}>
+							<Form.Label column md="2">Key</Form.Label>
+							<Col>
+								<FormControl name="key" type="text" placeholder="demo" value={values.key} onChange={handleChange} isValid={touched.key && !errors.key} isInvalid={errors.key !== undefined}/>
+								<FormControl.Feedback type="invalid">{errors.target}</FormControl.Feedback>
+							</Col>
+						</Form.Group>
+						<Button variant="primary" type="submit" disabled={isSubmitting || !isValid}><FontAwesomeIcon className="icon-text-left" icon="file-zipper"/>Shorten</Button>
+					</Form>
 					</React.Fragment>)
 			}}</Formik>
 		</React.Fragment>)

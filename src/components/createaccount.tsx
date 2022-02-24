@@ -64,15 +64,15 @@ export default class CreateAccount extends Component<any, CreateAccountState> {
 				const { values, touched, errors, handleChange, isSubmitting, handleSubmit, isValid } = props;
 				return (
 					<Form noValidate onSubmit={handleSubmit}>
-						<Form.Group controlId="username">
+						<Form.Group className="input-block" controlId="username">
 							<Form.Control name="username" type="text" placeholder="Username" value={values.username} onChange={handleChange} isValid={touched.username && !errors.username} isInvalid={errors.username !== undefined}/>
 							<Form.Control.Feedback type="invalid">{errors.username}</Form.Control.Feedback>
 						</Form.Group>
-						<Form.Group controlId="password">
+						<Form.Group className="input-block" controlId="password">
 							<Form.Control name="password" type="password" placeholder="Password" value={values.password} onChange={handleChange} isValid={touched.username && !errors.password} isInvalid={errors.password !== undefined}/>
 							<Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
 						</Form.Group>
-						<Form.Group controlId="passwordConfirm">
+						<Form.Group className="input-block" controlId="passwordConfirm">
 							<Form.Control name="passwordConfirm" type="password" required placeholder="Confirm Password" value={values.passwordConfirm} onChange={handleChange} isValid={touched.username && !errors.passwordConfirm} isInvalid={errors.passwordConfirm !== undefined}/>
 							<Form.Control.Feedback type="invalid">{errors.passwordConfirm}</Form.Control.Feedback>
 						</Form.Group>

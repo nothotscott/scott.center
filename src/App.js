@@ -19,8 +19,6 @@ const components = {
 	"Me": lazy(() => import("./components/me"))
 }
 
-//TODO <Helmet><title>the title</title></Helmet>
-
 export default class App extends Component {
 	constructor(props) {
 		super(props)
@@ -56,16 +54,14 @@ export default class App extends Component {
 	}
 	
 	render() {
-		return (<React.Fragment>
-			<Router>
-				<LayoutProvider>
-					<LayoutContext.Consumer>{({layout, setLayout}) => (
-						<AccountProvider layout={layout} setLayout={setLayout}>
-							<React.Fragment>{App.getRouterSwitch()}</React.Fragment>
-						</AccountProvider>
-					)}</LayoutContext.Consumer>
-				</LayoutProvider>
-			</Router>
-		</React.Fragment>)
+		return (<Router>
+			<LayoutProvider>
+				<LayoutContext.Consumer>{({layout, setLayout}) => (
+					<AccountProvider layout={layout} setLayout={setLayout}>
+						<React.Fragment>{App.getRouterSwitch()}</React.Fragment>
+					</AccountProvider>
+				)}</LayoutContext.Consumer>
+			</LayoutProvider>
+		</Router>)
 	}
 }

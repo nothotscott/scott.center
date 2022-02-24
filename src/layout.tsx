@@ -46,7 +46,13 @@ export default class LayoutProvider extends Component<{}, LayoutProviderState> {
 		this.state = {
 			layout: layoutDefault
 		}
-		this.state.layout.theme = LayoutProvider.getSystemTheme();
+	}
+	
+	public componentDidMount() {
+		this.setLayout({
+			theme: LayoutProvider.getSystemTheme(),
+			profiles: this.state.layout.profiles
+		})
 	}
 	
 	static getNavigationsFromProfiles(profiles: Array<string>) {

@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="813c4218-ba7a-4931-a123-0bcc16379b72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/shortener.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Scott.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Scott.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/github.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/themes/flatly.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/themes/lumen.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/themes/slate.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/rest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/rest.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/createaccount.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createaccount.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shortener.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shortener.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/title.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fonts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/fonts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/navigations.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/navigations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.scss" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +29,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
-        <option value="SCSS File" />
         <option value="HTTP Request" />
         <option value="tsconfig.json" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -52,7 +55,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="jsx.switch.disabled" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/themes" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -69,11 +73,16 @@
     <property name="ts.external.directory.path" value="C:\Users\Scott\source\repos\scott.center\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Scott\source\repos\scott.center\src\themes" />
+      <recent name="C:\Users\Scott\source\repos\scott.center\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Scott\source\repos\scott.center\src\themes" />
+      <recent name="C:\Users\Scott\source\repos\scott.center\src" />
       <recent name="D:\OneDrive\React\scott.center\src\assets" />
       <recent name="D:\OneDrive\React\scott.center\src\api" />
       <recent name="D:\OneDrive\React\scott.center\src" />
-      <recent name="D:\OneDrive\React\scott.center\src\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -162,7 +171,8 @@
       <workItem from="1627342933645" duration="84000" />
       <workItem from="1645486991624" duration="952000" />
       <workItem from="1645488545848" duration="19698000" />
-      <workItem from="1645549344219" duration="21376000" />
+      <workItem from="1645549344219" duration="26884000" />
+      <workItem from="1645639511005" duration="8699000" />
     </task>
     <servers />
   </component>

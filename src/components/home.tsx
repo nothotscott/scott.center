@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import { Col, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Title from "./title";
 import { AccountLibrary, AccountContext } from "../api/account";
@@ -17,7 +19,10 @@ export default class Home extends Component {
 		const {account} = this.context;
 		return (<React.Fragment>
 			<Title title="Home" subtitle={AccountLibrary.accountIsUndefined(account) ? "Welcome to Scott's official website" : "Hello " + account.username + "! Welcome back to Scott's official website"}/>
-			<p>scott.center is currently under development in ReactJS.</p>
+			<Row>
+				<Col><a href="https://github.com/nothotscott" className="h4 text-decoration-none"><FontAwesomeIcon icon={["fab", "github"]}/> Github</a></Col>
+				<Col><a href="mailto:scott@ma.day" className="h4 text-decoration-none"><FontAwesomeIcon icon={["fas", "envelope"]}/> Email</a></Col>
+			</Row>
 		</React.Fragment>)
 	}
 }
